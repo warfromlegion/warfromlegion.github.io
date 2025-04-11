@@ -32,7 +32,7 @@
             font-size: 40px;
             opacity: 0.8;
             filter: drop-shadow(0 0 5px rgba(255, 192, 203, 0.8));
-            animation: fallingHeart 5s linear infinite; /* Reduced duration for smoother animation */
+            animation: fallingHeart 5s linear infinite;
         }
 
         @keyframes fallingHeart {
@@ -121,7 +121,7 @@
         <script>
             try {
                 const heartContainer = document.querySelector('.heart-container');
-                const numberOfHearts = 100; // Reduced number for performance
+                const numberOfHearts = 100;
 
                 for (let i = 0; i < numberOfHearts; i++) {
                     const heart = document.createElement('div');
@@ -129,9 +129,9 @@
                     heart.textContent = '❤️';
                     heart.style.left = `${Math.random() * 100}vw`;
                     heart.style.top = `-${Math.random() * 100}%`;
-                    heart.style.fontSize = `${Math.random() * 20 + 15}px`; // Adjusted size for mobile
-                    heart.style.animationDuration = `${Math.random() * 2 + 3}s`; // Reduced duration
-                    heart.style.animationDelay = `${Math.random() * 5}s`; // Reduced delay
+                    heart.style.fontSize = `${Math.random() * 20 + 15}px`; 
+                    heart.style.animationDuration = `${Math.random() * 2 + 3}s`;
+                    heart.style.animationDelay = `${Math.random() * 5}s`; 
                     heartContainer.appendChild(heart);
                 }
             } catch (error) {
