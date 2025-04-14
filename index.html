@@ -115,8 +115,17 @@
             }
         }
     </style>
+    <script>
+        function checkPassword() {
+            const password = prompt("Please enter the password to view this page:");
+            if (password !== "formylovealex!@#$") {
+                alert("Incorrect password. Access denied.");
+                window.location.href = "about:blank"; // Redirect to a blank page
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="checkPassword()">
     <div class="heart-container">
         <script>
             try {
