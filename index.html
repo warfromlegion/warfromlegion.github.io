@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>for my sweetheart <3</title>
+    <title>For My Sweetheart <3</title>
     <style>
         * {
             margin: 0;
@@ -13,9 +12,9 @@
         }
 
         body {
-            background: linear-gradient(to right, purple, red);
+            background-color: purple; 
             overflow-x: hidden;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Verdana', sans-serif;
         }
 
         .heart-container {
@@ -28,25 +27,35 @@
             z-index: 0;
         }
 
-        .heart, .star {
+        .heart {
             position: absolute;
-            font-size: 40px;
-            opacity: 0.8;
-            filter: drop-shadow(0 0 5px rgba(255, 192, 203, 0.8));
-            animation: falling 5s linear infinite;
+            font-size: 50px;
+            color: lightpink; 
+            opacity: 0.9;
+            filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.8));
+            animation: falling 4s linear infinite;
+        }
+
+        .star {
+            position: absolute;
+            font-size: 50px;
+            color: red; 
+            opacity: 0.9;
+            filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.8));
+            animation: falling 4s linear infinite;
         }
 
         @keyframes falling {
             0% {
-                top: -20%;
+                top: -10%;
                 left: calc((Math.random() * 100vw));
                 transform: rotate(0deg) scale(1);
                 opacity: 1;
             }
             100% {
-                top: 120%;
+                top: 130%;
                 left: calc((Math.random() * 100vw));
-                transform: rotate(180deg) scale(1);
+                transform: rotate(360deg) scale(1);
                 opacity: 0;
             }
         }
@@ -60,31 +69,31 @@
             align-items: center;
             text-align: center;
             z-index: 1;
-            background: radial-gradient(circle, rgba(255, 192, 203, 0.8), rgba(255, 105, 180, 0.6));
+            background: radial-gradient(circle, rgba(255, 165, 0, 0.8), rgba(255, 228, 196, 0.6));
         }
 
         h1 {
-            font-size: 3rem;
-            color: #ff1493;
-            text-shadow: 0 0 10px rgba(255, 105, 180, 0.8), 0 0 20px rgba(255, 105, 180, 0.6);
+            font-size: 4rem;
+            color: #ff4500;
+            text-shadow: 0 0 15px rgba(255, 228, 196, 0.8), 0 0 30px rgba(255, 228, 196, 0.6);
             line-height: 1.4;
-            animation: glow 2s infinite alternate;
+            animation: glow 1.5s infinite alternate;
         }
 
         h1 span {
-            font-size: 1.5rem;
-            color: #ff69b4;
+            font-size: 2rem;
+            color: #ff6347;
             display: block;
-            margin-top: 20px;
-            animation: float 3s ease-in-out infinite;
+            margin-top: 25px;
+            animation: float 2.5s ease-in-out infinite;
         }
 
         @keyframes glow {
             0% {
-                text-shadow: 0 0 10px rgba(255, 105, 180, 0.8), 0 0 20px rgba(255, 105, 180, 0.6);
+                text-shadow: 0 0 15px rgba(255, 228, 196, 0.8), 0 0 30px rgba(255, 228, 196, 0.6);
             }
             100% {
-                text-shadow: 0 0 20px rgba(255, 105, 180, 1), 0 0 40px rgba(255, 105, 180, 0.8);
+                text-shadow: 0 0 25px rgba(255, 228, 196, 1), 0 0 50px rgba(255, 228, 196, 0.8);
             }
         }
 
@@ -93,15 +102,15 @@
                 transform: translateY(0);
             }
             50% {
-                transform: translateY(-10px);
+                transform: translateY(-15px);
             }
         }
 
         .moving-text {
             position: absolute;
-            font-size: 2rem;
-            color: #ff69b4;
-            animation: move 10s linear infinite;
+            font-size: 2.5rem;
+            color: #ff6347;
+            animation: move 8s linear infinite;
         }
 
         @keyframes move {
@@ -115,11 +124,11 @@
 
         @media (max-width: 600px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             h1 span {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -129,8 +138,8 @@
         <script>
             try {
                 const heartContainer = document.querySelector('.heart-container');
-                const numberOfHearts = 30; 
-                const numberOfStars = 20; 
+                const numberOfHearts = 40; 
+                const numberOfStars = 30; 
 
                 for (let i = 0; i < numberOfHearts; i++) {
                     const heart = document.createElement('div');
@@ -138,8 +147,8 @@
                     heart.textContent = '❤️';
                     heart.style.left = `${Math.random() * 100}vw`;
                     heart.style.top = `-${Math.random() * 100}%`;
-                    heart.style.fontSize = `${Math.random() * 20 + 15}px`; 
-                    heart.style.animationDuration = `${Math.random() * 2 + 3}s`;
+                    heart.style.fontSize = `${Math.random() * 25 + 20}px`; 
+                    heart.style.animationDuration = `${Math.random() * 2 + 2}s`;
                     heart.style.animationDelay = `${Math.random() * 5}s`; 
                     heartContainer.appendChild(heart);
                 }
@@ -150,8 +159,8 @@
                     star.textContent = '⭐';
                     star.style.left = `${Math.random() * 100}vw`;
                     star.style.top = `-${Math.random() * 100}%`;
-                    star.style.fontSize = `${Math.random() * 20 + 15}px`; 
-                    star.style.animationDuration = `${Math.random() * 2 + 3}s`;
+                    star.style.fontSize = `${Math.random() * 25 + 20}px`; 
+                    star.style.animationDuration = `${Math.random() * 2 + 2}s`;
                     star.style.animationDelay = `${Math.random() * 5}s`; 
                     heartContainer.appendChild(star);
                 }
@@ -163,13 +172,13 @@
 
     <div class="container">
         <h1>
-            hello sweetie :3<br>
-            i love you with all my heart <br>
-            <span> you are my everything Alice <3 </span>
+            Hello Sweetie :3<br>
+            I love you with all my heart <br>
+            <span>You are my everything Alice <3</span>
         </h1>
-        <div class="moving-text" style="top: 20%; left: 0;">i will always be here for you :3</div>
-        <div class="moving-text" style="top: 40%; left: 0;">i am forever yours</div>
-        <div class="moving-text" style="top: 60%; left: 0;">my heart belongs to you <3</div>
+        <div class="moving-text" style="top: 25%; left: 0;">I will always be here for you :3</div>
+        <div class="moving-text" style="top: 45%; left: 0;">I am forever yours</div>
+        <div class="moving-text" style="top: 65%; left: 0;">My heart belongs to you <3</div>
     </div>
 </body>
 </html>
